@@ -40,3 +40,8 @@ build/
 *.tmp
 *.temp
 .cache/
+
+# Archive/Backup files
+Durga-Project/
+Durga-Project.zip
+*.zip

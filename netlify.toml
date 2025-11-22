@@ -1,6 +1,7 @@
 [build]
   publish = "."
   command = "npm install"
+  ignore = "git diff --quiet HEAD^ HEAD -- ."
 
 [functions]
   directory = "netlify/functions"
@@ -16,3 +17,7 @@
 
 [context.deploy-preview.environment]
   NODE_ENV = "development"
+
+# Ignore submodules during build
+[build.environment]
+  GIT_SUBMODULE_STRATEGY = "none"
