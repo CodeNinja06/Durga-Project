@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Durga Group of Companies</title>
+  <meta name="description" content="Selected industrial, civil, and railway projects delivered by Durga Group of Companies." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container nav">
+      <a class="brand" href="/"><span class="brand__mark" aria-hidden="true"></span><span>Durga Group</span></a>
+      <nav aria-label="Primary">
+        <button class="nav__toggle btn" aria-expanded="false" aria-controls="nav-links">Menu</button>
+        <div id="nav-links" class="nav__links">
+          <a class="nav__link" href="/">Home</a>
+          <a class="nav__link" href="about.html">About</a>
+          <a class="nav__link" href="services.html">Services</a>
+          <a class="nav__link" href="projects.html">Projects</a>
+          <a class="nav__link" href="clients.html">Clients</a>
+          <a class="nav__link btn btn--primary" href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" role="region" aria-label="Projects">
+    <div class="container">
+      <h1 class="title">Projects</h1>
+      <p class="lead">A snapshot of execution across industrial, civil, and railway works.</p>
+    </div>
+  </section>
+
+  <main>
+    <section class="section section--alt" aria-label="Project gallery">
+      <div class="container">
+        <div data-filters class="filters" role="tablist" aria-label="Project filters">
+          <button class="filter-btn is-active" data-cat="all" role="tab">All</button>
+          <button class="filter-btn" data-cat="industrial" role="tab">Industrial</button>
+          <button class="filter-btn" data-cat="civil" role="tab">Civil</button>
+          <button class="filter-btn" data-cat="rail" role="tab">Railway</button>
+        </div>
+        <div class="grid grid-3">
+          <article class="project" data-project="industrial">
+            <img src="https://images.unsplash.com/photo-1542601098-8fc114e1484f?w=900&q=80" alt="Cement plant maintenance" loading="lazy" />
+            <div class="project__cap">Shutdown Maintenance</div>
+          </article>
+          <article class="project" data-project="industrial">
+            <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=900&q=80" alt="Conveyor retrofitting" loading="lazy" />
+            <div class="project__cap">Conveyor Retrofit</div>
+          </article>
+          <article class="project" data-project="civil">
+            <img src="https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?w=900&q=80" alt="RCC structure" loading="lazy" />
+            <div class="project__cap">RCC Structures</div>
+          </article>
+          <article class="project" data-project="civil">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80" alt="Industrial roads and drains" loading="lazy" />
+            <div class="project__cap">Roads & Drains</div>
+          </article>
+          <article class="project" data-project="rail">
+            <img src="https://images.unsplash.com/photo-1436491911646-13940d0d36fd?w=900&q=80" alt="Railway siding development" loading="lazy" />
+            <div class="project__cap">Siding Development</div>
+          </article>
+          <article class="project" data-project="rail">
+            <img src="https://images.unsplash.com/photo-1477414348463-c0eb7f1359b6?w=900&q=80" alt="Material handling for wagons" loading="lazy" />
+            <div class="project__cap">Wagon Handling Systems</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="CTA">
+      <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+        <div><h2 class="section__title">Have a similar scope?</h2><p class="muted">Share your requirements. We’ll propose a practical execution plan.</p></div>
+        <div><a class="btn btn--primary" href="contact.html">Request a proposal</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__section">
+          <h3 class="footer__title">Durga Group of Companies</h3>
+          <p class="footer__text">25+ years of trusted execution in industrial, civil, and railway projects across India.</p>
+        </div>
+        <div class="footer__section">
+          <h4 class="footer__subtitle">Quick Links</h4>
+          <nav aria-label="Footer">
+            <a class="footer__link" href="about.html">About</a>
+            <a class="footer__link" href="services.html">Services</a>
+            <a class="footer__link" href="projects.html">Projects</a>
+            <a class="footer__link" href="clients.html">Clients</a>
+            <a class="footer__link" href="contact.html">Contact</a>
+          </nav>
+        </div>
+        <div class="footer__section">
+          <h4 class="footer__subtitle">Services</h4>
+          <nav aria-label="Footer services">
+            <a class="footer__link" href="services.html#industrial">Industrial Projects</a>
+            <a class="footer__link" href="services.html#civil">Civil & Infrastructure</a>
+            <a class="footer__link" href="services.html#railway">Railway Works</a>
+          </nav>
+        </div>
+        <div class="footer__section">
+          <h4 class="footer__subtitle">Get in Touch</h4>
+          <p class="footer__text">Ready to start your project?</p>
+          <a class="btn btn--primary" href="contact.html" style="margin-top:12px">Request Proposal</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <small>© <span id="year"></span> Durga Group of Companies. All rights reserved.</small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

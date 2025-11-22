@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Durga Group of Companies</title>
+  <meta name="description" content="Request a proposal from Durga Group of Companies. Share your scope and timelines for industrial, civil, or railway projects." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+    .form{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+      max-width:800px;
+      margin:0 auto;
+    }
+    .form .full{grid-column:1/-1}
+    .field{
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .field label{
+      font-weight:700;
+      color:#0f2740;
+      font-size:15px;
+    }
+    .field input,
+    .field select,
+    .field textarea{
+      padding:14px 16px;
+      border:2px solid #E5E7EB;
+      border-radius:12px;
+      background:#fff;
+      font:inherit;
+      font-size:15px;
+      transition:all 0.3s ease;
+    }
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus{
+      outline:none;
+      border-color:var(--gold);
+      box-shadow:0 0 0 3px rgba(246,185,59,.1);
+    }
+    .field textarea{
+      min-height:140px;
+      resize:vertical;
+      font-family:inherit;
+    }
+    .field input[type="file"]{
+      padding:10px;
+      cursor:pointer;
+    }
+    .field input[type="file"]:hover{
+      border-color:var(--navy);
+    }
+    .form-actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .form-success{
+      display:none;
+      background:linear-gradient(135deg,#10b981,#059669);
+      color:white;
+      padding:20px;
+      border-radius:12px;
+      margin-bottom:24px;
+      text-align:center;
+      animation:fadeInUp 0.5s ease;
+    }
+    .form-success.visible{display:block}
+    @media(max-width:760px){
+      .form{grid-template-columns:1fr}
+      .form-actions{flex-direction:column}
+      .form-actions .btn{width:100%}
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container nav">
+      <a class="brand" href="/"><span class="brand__mark" aria-hidden="true"></span><span>Durga Group</span></a>
+      <nav aria-label="Primary">
+        <button class="nav__toggle btn" aria-expanded="false" aria-controls="nav-links">Menu</button>
+        <div id="nav-links" class="nav__links">
+          <a class="nav__link" href="/">Home</a>
+          <a class="nav__link" href="about.html">About</a>
+          <a class="nav__link" href="services.html">Services</a>
+          <a class="nav__link" href="projects.html">Projects</a>
+          <a class="nav__link" href="clients.html">Clients</a>
+          <a class="nav__link btn btn--primary" href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" role="region" aria-label="Contact">
+    <div class="container">
+      <h1 class="title">Request a Proposal</h1>
+      <p class="lead">Share your scope and timelines. We’ll get back promptly with next steps.</p>
+    </div>
+  </section>
+
+  <main>
+    <section class="section section--alt" aria-label="Contact form">
+      <div class="container">
+        <form class="form" name="contact" method="POST" data-netlify="true" enctype="multipart/form-data">
+          <input type="hidden" name="form-name" value="contact" />
+          <div class="field"><label for="name">Full Name</label><input id="name" name="name" required /></div>
+          <div class="field"><label for="company">Company</label><input id="company" name="company" /></div>
+          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required /></div>
+          <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" /></div>
+          <div class="field full"><label for="branch">Business Area</label>
+            <select id="branch" name="branch">
+              <option value="Industrial">Industrial</option>
+              <option value="Civil">Civil</option>
+              <option value="Railway">Railway</option>
+            </select>
+          </div>
+          <div class="field full"><label for="message">Scope / Message</label><textarea id="message" name="message" required></textarea></div>
+          <div class="field full"><label for="file">RFP / Attachment (optional)</label><input id="file" name="file" type="file" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" /></div>
+          <div class="form-success" id="form-success">
+            <strong>✓ Thank you!</strong> Your message has been sent successfully. We'll get back to you soon.
+          </div>
+          <div class="full form-actions">
+            <button class="btn btn--primary" type="submit">Send Request</button>
+            <a class="btn" href="/" role="button">Back to Home</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__section">
+          <h3 class="footer__title">Durga Group of Companies</h3>
+          <p class="footer__text">25+ years of trusted execution in industrial, civil, and railway projects across India.</p>
+        </div>
+        <div class="footer__section">
+          <h4 class="footer__subtitle">Quick Links</h4>
+          <nav aria-label="Footer">
+            <a class="footer__link" href="about.html">About</a>
+            <a class="footer__link" href="services.html">Services</a>
+            <a class="footer__link" href="projects.html">Projects</a>
+            <a class="footer__link" href="clients.html">Clients</a>
+            <a class="footer__link" href="contact.html">Contact</a>
+          </nav>
+        </div>
+        <div class="footer__section">
+          <h4 class="footer__subtitle">Services</h4>
+          <nav aria-label="Footer services">
+            <a class="footer__link" href="services.html#industrial">Industrial Projects</a>
+            <a class="footer__link" href="services.html#civil">Civil & Infrastructure</a>
+            <a class="footer__link" href="services.html#railway">Railway Works</a>
+          </nav>
+        </div>
+        <div class="footer__section">
+          <h4 class="footer__subtitle">Get in Touch</h4>
+          <p class="footer__text">Ready to start your project?</p>
+          <a class="btn btn--primary" href="contact.html" style="margin-top:12px">Request Proposal</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <small>© <span id="year"></span> Durga Group of Companies. All rights reserved.</small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/contact-form.js"></script>
+</body>
+</html>
