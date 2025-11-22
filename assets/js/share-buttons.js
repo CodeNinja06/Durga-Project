@@ -3,10 +3,6 @@
   'use strict';
 
   const createShareButtons = () => {
-    // Add to project cards and CTA sections
-    const projectCards = document.querySelectorAll('.project');
-    const ctaSections = document.querySelectorAll('.section--alt:has(.btn--primary)');
-
     const shareHTML = `
       <div class="share-buttons">
         <button class="share-btn twitter" onclick="shareOnTwitter()" aria-label="Share on Twitter">
@@ -24,11 +20,20 @@
       </div>
     `;
 
-    // Add to CTA sections
+    // Add to CTA sections (fix for browsers that don't support :has())
+    const ctaSections = document.querySelectorAll('.section--alt');
     ctaSections.forEach(section => {
-      const ctaContent = section.querySelector('.container > div:last-child');
-      if (ctaContent && !ctaContent.querySelector('.share-buttons')) {
-        ctaContent.insertAdjacentHTML('afterend', shareHTML);
+      const btnPrimary = section.querySelector('.btn--primary');
+      if (btnPrimary) {
+        const container = section.querySelector('.container');
+        if (container && !container.querySelector('.share-buttons')) {
+          const lastDiv = container.querySelector('div:last-child');
+          if (lastDiv) {
+            lastDiv.insertAdjacentHTML('afterend', shareHTML);
+          } else {
+            container.insertAdjacentHTML('beforeend', shareHTML);
+          }
+        }
       }
     });
   };
